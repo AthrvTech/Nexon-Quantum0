@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexon Quantum - Innovating Digital Experiences</title>
+    
     <!-- Tailwind CSS CDN for modern and responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom font for a sleek, professional look */
         body {
             font-family: "Inter", sans-serif;
-            overflow-x: hidden; /* Prevents horizontal scroll issues, especially with animations */
+            overflow-x: hidden;
         }
 
-        /* Custom gradient for the hero section background */
         .hero-gradient-bg {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); /* Dark, futuristic gradient */
-            position: relative; /* Needed for pseudo-element positioning */
-            overflow: hidden; /* Hides overflow from the background animation */
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Subtle background animation for the hero section to add dynamism */
         .hero-gradient-bg::before {
             content: '';
             position: absolute;
@@ -28,66 +30,78 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            /* Radial gradient for a glowing/pulsing effect */
             background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
-            animation: pulse-bg 15s infinite alternate ease-in-out; /* Animation definition */
-            z-index: 0; /* Ensures it stays behind content */
+            animation: pulse-bg 15s infinite alternate ease-in-out;
+            z-index: 0;
         }
 
-        /* Keyframes for the hero background pulse animation */
         @keyframes pulse-bg {
             0% { transform: scale(1); opacity: 0.8; }
             50% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); opacity: 0.8; }
         }
 
-        /* Text animation for elements within the hero section */
         .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards; /* Apply fadeInUp animation */
-            opacity: 0; /* Start elements hidden */
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
         }
 
-        /* Delays for sequential animation of hero text elements */
         .animate-fade-in-up.delay-1 { animation-delay: 0.3s; }
         .animate-fade-in-up.delay-2 { animation-delay: 0.6s; }
         .animate-fade-in-up.delay-3 { animation-delay: 0.9s; }
 
-        /* Keyframes for the fade-in-up text animation */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px); /* Start slightly below final position */
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0); /* End at final position */
+                transform: translateY(0);
             }
         }
 
-        /* Primary button styling with gradient and hover effects */
         .btn-primary {
-            background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%); /* Indigo to purple gradient */
-            transition: all 0.3s ease; /* Smooth transition for all properties */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
+
         .btn-primary:hover {
-            background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%); /* Reverse gradient on hover */
-            transform: translateY(-2px); /* Slight lift effect */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+            background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Service card styling with hover effects */
         .service-card {
-            transition: all 0.3s ease; /* Smooth transition for all properties */
-            border: 1px solid transparent; /* Transparent border for hover effect */
-        }
-        .service-card:hover {
-            transform: translateY(-5px); /* Slight lift effect on hover */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-            border-color: #6366f1; /* Indigo border on hover */
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
-        /* Mobile menu specific styles for slide-in/out effect */
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: #6366f1;
+        }
+
         .mobile-menu {
-            transition: transform 0.3s ease-in-out; /* Smooth slide transition */
-            transform: translateX(100%); /* Start of
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="hero-gradient-bg min-h-screen text-white">
+    <header class="p-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold z-10">Nexon Quantum</h1>
+        <!-- You can add nav/menu icons here -->
+    </header>
+
+    <section class="text-center mt-24 z-10 relative">
+        <h2 class="text-5xl font-bold animate-fade-in-up delay-1">Innovating Digital Experiences</h2>
+        <p class="text-xl mt-4 animate-fade-in-up delay-2">Where ideas meet futuristic technology</p>
+        <button class="btn-primary mt-8 px-6 py-3 rounded-lg text-white text-lg animate-fade-in-up delay-3">
+            Get Started
+        </button>
+    </section>
+</body>
+</html>
